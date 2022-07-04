@@ -1,7 +1,8 @@
 import React from 'react'
-import {Link, useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import projects from '../../projectsData'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 import defaultImage from '../../logo.svg'
 import '../../index.css'
 
@@ -10,7 +11,7 @@ const SingleProjectComponent = () =>{
 
     const {projectId} = useParams();
     const project = projects.find((project)=>{return project.id === projectId});
-    const {name, description, img, guides} = project;
+    const {name, description, img, url, guides} = project;
 
     return(
         <section className="section">
@@ -21,6 +22,11 @@ const SingleProjectComponent = () =>{
                     <Card.Text>
                     {description}
                     </Card.Text>
+                    <Button variant="warning">
+                        <a href={url} target="_blank" rel='noopener'>
+                            Check Project Online
+                        </a>
+                    </Button>
                 </Card.Body>
             </Card>            
             <br/>
@@ -56,8 +62,6 @@ const SingleProjectComponent = () =>{
 
         </section>
     )
-
-
 }
 
 export default SingleProjectComponent

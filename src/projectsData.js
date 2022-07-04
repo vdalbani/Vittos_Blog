@@ -2,9 +2,10 @@
 const projects = [
     {
         id:"1",
-        name:"Project one",
-        description: "Project one description here",
+        name:"Blog Post",
+        description: "Created this front and back-end responsive web application that creates, updates, displays and deletes objects from a custom MongoDB database.The user is able to create a post that is displayed in a list that can be tagged, commented and viewed. The web app was structured according to MVC Design Pattern and complemented with third party packages and tools such as Express, Routing, and Bootstrap.",
         img:"https://i.postimg.cc/HxVcB7kB/pug.png",
+        url:"https://blog-angular01.herokuapp.com/blog",
         guides:{
             guide1:{
                 desc:"What it does 1",
