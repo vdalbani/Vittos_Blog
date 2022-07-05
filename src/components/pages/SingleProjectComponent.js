@@ -16,9 +16,22 @@ const SingleProjectComponent = () =>{
     return(
         <section className="section">
             <Card>
+                <Card.Header>
+                    <Button variant="warning">
+                        <a href={url} target="_blank" rel='noopener'>
+                            Check Project Online
+                        </a>
+                    </Button>
+                    <br />
+                    <h3>
+                        {name}
+                    </h3>
+                </Card.Header>
                 <Card.Body>
-                    <Card.Img variant='top'style={{width: "cover",height:"10rem"}} src={defaultImage} />
-                    <Card.Title>{name}</Card.Title>
+                    {/* <Card.Img variant='top'style={{width: "cover",height:"10rem"}} src={defaultImage} /> */}
+                    <Card.Img variant='top'style={{width: "cover"}} src={img} />
+                    <br/><br/>
+                    {/* <Card.Title>{name}</Card.Title> */}
                     <Card.Text>
                     {description}
                     </Card.Text>
@@ -31,9 +44,9 @@ const SingleProjectComponent = () =>{
             </Card>            
             <br/>
             <Card style={{flexDirection:"row"}}>
-                <Card.Img style={{width:"30%"}} src={guides.guide1.img} />
+                <Card.Img style={{width:"50%"}} src={guides.guide1.img} />
                 <Card.Body>
-                    {/* <Card.Title>Card Title</Card.Title> */}
+                    <Card.Title>{guides.guide1.title}</Card.Title>
                     <Card.Text>
                         {guides.guide1.desc}
                     </Card.Text>
@@ -42,18 +55,18 @@ const SingleProjectComponent = () =>{
             <br/>
             <Card style={{flexDirection:"row"}}>
                 <Card.Body>
-                    {/* <Card.Title>Card Title</Card.Title> */}
+                    <Card.Title>{guides.guide2.title}</Card.Title>
                     <Card.Text>
                         {guides.guide2.desc}
                     </Card.Text>
                 </Card.Body>
-                <Card.Img style={{width:"30%"}} src={guides.guide2.img} />
+                <Card.Img style={{width:"50%"}} src={guides.guide2.img} />
             </Card>
             <br/>
             <Card style={{flexDirection:"row"}}>
-                <Card.Img style={{width:"30%"}} src={guides.guide3.img} />
+                <Card.Img style={{width:"50%"}} src={guides.guide3.img} />
                 <Card.Body>
-                    {/* <Card.Title>Card Title</Card.Title> */}
+                    <Card.Title>{guides.guide3.title}</Card.Title>
                     <Card.Text>
                         {guides.guide3.desc}
                     </Card.Text>

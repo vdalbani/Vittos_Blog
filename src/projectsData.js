@@ -2,22 +2,25 @@
 const projects = [
     {
         id:"1",
-        name:"Blog Post",
+        name:"Blog Post Web Application (Node.js, JavaScript, Angular, Heroku, MongoDB)",
         description: "Created this front and back-end responsive web application that creates, updates, displays and deletes objects from a custom MongoDB database.The user is able to create a post that is displayed in a list that can be tagged, commented and viewed. The web app was structured according to MVC Design Pattern and complemented with third party packages and tools such as Express, Routing, and Bootstrap.",
-        img:"https://i.postimg.cc/HxVcB7kB/pug.png",
+        img:"https://i.postimg.cc/tTsY6Zgj/p1-lwlw-blg-01.jpg",
         url:"https://blog-angular01.herokuapp.com/blog",
         guides:{
             guide1:{
-                desc:"What it does 1",
-                img:"https://i.postimg.cc/HxVcB7kB/pug.png"
+                title:"Home Page",
+                desc:"The web application displays a list of blog objects retrieved from a custom MongoDB database.",
+                img:"https://i.postimg.cc/3RvcW12Q/p1-blog-capture1.jpg"
             },
             guide2:{
-                desc:"Second description",
-                img:"https://i.postimg.cc/HxVcB7kB/pug.png"
+                title:"Admin",
+                desc:"The web application contains an Administrator page that allows to create, update and delete posts from a MongoDB database.",
+                img:"https://i.postimg.cc/yYPrJk3x/p1-blog-capture3.jpg"
             },
             guide3:{
-                desc:"third description",
-                img:"https://i.postimg.cc/HxVcB7kB/pug.png"
+                title:"Single Post",
+                desc:"The user can select the post of choice and view it individually. The post can be tagged and commented by the user. The comments will be automatically submited and saved in a MongoDB database",
+                img:"https://i.postimg.cc/ZnDBg8D0/p1-lwlw-blg-04.jpg"
             }
         }
     },
