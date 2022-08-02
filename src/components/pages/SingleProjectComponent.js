@@ -16,12 +16,7 @@ const SingleProjectComponent = () =>{
     return(
         <section className="section">
             <Card>
-                <Card.Header>
-                    <Button variant="warning">
-                        <a href={url} target="_blank" rel='noopener'>
-                            Check Project Online
-                        </a>
-                    </Button>
+                <Card.Header style={{backgroundColor:'#800080', color:'white'}}>
                     <br />
                     <h3>
                         {name}
@@ -36,14 +31,15 @@ const SingleProjectComponent = () =>{
                     {description}
                     </Card.Text>
                     <Button variant="warning">
-                        <a href={url} target="_blank" rel='noopener'>
-                            Check Project Online
+                        <a href={url} target="_blank" rel='noopener' style={{textDecoration: 'none', color:'black'}}>
+                            CHECK PROJECT ONLINE
                         </a>
                     </Button>
                 </Card.Body>
             </Card>            
             <br/>
             <Card style={{flexDirection:"row"}}>
+             {/* <Card> */}
                 <Card.Img style={{width:"50%"}} src={guides.guide1.img} />
                 <Card.Body>
                     <Card.Title>{guides.guide1.title}</Card.Title>

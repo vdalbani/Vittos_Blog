@@ -24,7 +24,7 @@ export class ProjectsComponent extends Component {
             different filenames. Examples include index.html, index.htm, index.shtml, index.php, default.html, and home.html. 
             The default filename of a website's home page can be customized on both Apache and IIS servers. Since the home page file is 
             loaded automatically from the root directory, the home page URL does not need need to include the filename.
-            </Card.Body>
+          </Card.Body>
         </Card>
       </section>
       <section className = 'section'>
@@ -37,11 +37,11 @@ export class ProjectsComponent extends Component {
                 <Card.Body>
                   <Card.Title>{project.name}</Card.Title>
                   <Card.Text>
-                    {project.description}
+                    {project.overview}
                   </Card.Text>
                   <Button variant="warning">
-                    <Link to={`/projects/${project.id}`}>
-                      See Project
+                    <Link style={{textDecoration: 'none', color:'black'}} to={`/projects/${project.id}`}>
+                      SEE MORE ...
                     </Link>
                   </Button>
                 </Card.Body>
