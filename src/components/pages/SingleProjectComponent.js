@@ -3,73 +3,96 @@ import {useParams} from 'react-router-dom'
 import projects from '../../projectsData'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
-import defaultImage from '../../logo.svg'
+import Col from 'react-bootstrap/Col'
+import Row from 'react-bootstrap/Row'
+import Container from 'react-bootstrap/Container'
 import '../../index.css'
+import CardImg from 'react-bootstrap/CardImg'
 
 const SingleProjectComponent = () =>{
-    console.log(useParams());
+    // console.log(useParams());
 
     const {projectId} = useParams();
     const project = projects.find((project)=>{return project.id === projectId});
     const {name, description, img, url, guides} = project;
 
     return(
-        <section className="section">
-            <Card>
-                <Card.Header style={{backgroundColor:'#800080', color:'white'}}>
-                    <br />
-                    <h3>
-                        {name}
-                    </h3>
-                </Card.Header>
-                <Card.Body>
-                    {/* <Card.Img variant='top'style={{width: "cover",height:"10rem"}} src={defaultImage} /> */}
-                    <Card.Img variant='top'style={{width: "cover"}} src={img} />
-                    <br/><br/>
-                    {/* <Card.Title>{name}</Card.Title> */}
-                    <Card.Text>
-                    {description}
-                    </Card.Text>
-                    <Button variant="warning">
-                        <a href={url} target="_blank" rel='noopener' style={{textDecoration: 'none', color:'black'}}>
-                            CHECK PROJECT ONLINE
-                        </a>
-                    </Button>
-                </Card.Body>
-            </Card>            
-            <br/>
-            <Card style={{flexDirection:"row"}}>
-             {/* <Card> */}
-                <Card.Img style={{width:"50%"}} src={guides.guide1.img} />
-                <Card.Body>
-                    <Card.Title>{guides.guide1.title}</Card.Title>
-                    <Card.Text>
-                        {guides.guide1.desc}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
-            <br/>
-            <Card style={{flexDirection:"row"}}>
-                <Card.Body>
-                    <Card.Title>{guides.guide2.title}</Card.Title>
-                    <Card.Text>
-                        {guides.guide2.desc}
-                    </Card.Text>
-                </Card.Body>
-                <Card.Img style={{width:"50%"}} src={guides.guide2.img} />
-            </Card>
-            <br/>
-            <Card style={{flexDirection:"row"}}>
-                <Card.Img style={{width:"50%"}} src={guides.guide3.img} />
-                <Card.Body>
-                    <Card.Title>{guides.guide3.title}</Card.Title>
-                    <Card.Text>
-                        {guides.guide3.desc}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+        <>
+        <section className="sectionSingleComponent" style={{  padding: '1em', margin:'0', background:'#301934', color:'white',}}>
+            {/* NEW BANNER */}
+                <Row className='g-0' style={{alignItems:'center'}}>
+                    <Col md='5'>
+                        <CardImg src={img}></CardImg>
+                    </Col>
+                    <Col md='7'>
+                        <Card.Body>
+                            <Card.Title><strong>{name}</strong></Card.Title>
+                            <Card.Text>{description}</Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <a href={url} target="_blank" rel='noreferrer' style={{textDecoration: 'none'}}>
+                            <Button className='btn btn-outline-dark' style={{background: '#e1affd'}}>      
+                                    Check Project Online...
+                            </Button>
+                            </a>
+                        </Card.Footer>
+                    </Col>
+                </Row>
 
+            {/* NEW BANNER ENDS */}   
         </section>
+        <section className="section">
+            {/* NEW CARD */}
+            <Container style={{padding:'0'}}>
+                <Card>
+                    <Row style={{alignItems:'center'}}>
+                        <Col md='5'>
+                            <CardImg src={guides.guide1.img} alt="..."></CardImg>
+                        </Col>
+                        <Col md='7'>
+                            <Card.Body>
+                                <Card.Title>{guides.guide1.title}</Card.Title>
+                                <Card.Text>{guides.guide1.desc}</Card.Text>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>
+            </Container>
+            <br/>
+            <Container style={{padding:'0'}}>
+                <Card>
+                    <Row style={{alignItems:'center'}}>
+                        <Col md='5'>
+                            <CardImg src={guides.guide2.img}></CardImg>
+                        </Col>
+                        <Col md='7'>
+                            <Card.Body>
+                                <Card.Title>{guides.guide2.title}</Card.Title>
+                                <Card.Text>{guides.guide2.desc}</Card.Text>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>
+            </Container>
+            <br/>
+            <Container style={{padding:'0'}}>
+                <Card>
+                    <Row style={{alignItems:'center'}}>
+                        <Col md='5'>
+                            <CardImg src={guides.guide3.img}></CardImg>
+                        </Col>
+                        <Col md='7'>
+                            <Card.Body>
+                                <Card.Title>{guides.guide3.title}</Card.Title>
+                                <Card.Text>{guides.guide3.desc}</Card.Text>
+                            </Card.Body>
+                        </Col>
+                    </Row>
+                </Card>
+            </Container>
+            {/* NEW CARD ENDS */}
+        </section>           
+        </>
     )
 }
 
