@@ -44,7 +44,6 @@ export class ProjectsComponent extends Component {
         })}
       </Row>
     </section>  
-
   </>
     )
   }
