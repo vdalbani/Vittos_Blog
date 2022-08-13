@@ -69,7 +69,7 @@ export class FooterComponent extends Component {
         <div class="container">
             <div class="row">
             <div class="col-md-6">
-                <p>&copy; 2022. All rights reserved. Your great site.</p>
+                <p>&copy; 2022. All rights reserved. </p>
             </div>
             </div>
         </div>

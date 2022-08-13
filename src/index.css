@@ -95,10 +95,6 @@ body {
   color: var(--textColor);
 }
 
-p {
-  margin-bottom: 1.5rem;
-  max-width: 40em;
-}
 
 h1,
 h2,
@@ -404,6 +400,42 @@ ul {
   padding: 2rem 1rem;
 }
 
+/* About  and Contact*/
+.bannerTitle{
+
+      background-image: url('../public/images/background_1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 10em 0;
+  color: white;
+  text-align: center;
+}
+
+.aboutInfo{
+  background: rgba(5, 5, 5, 0.836);
+  background-size: cover;
+  background-position: center;
+  text-align: justify;
+  padding: 4rem 0;
+  color: white;
+}
+
+.logoContact{
+  width: 100%;
+  padding:1em;
+  display: block;
+  object-fit: cover;
+}
+
+.contactInfo{
+  background: rgba(5, 5, 5, 0.836);
+  background-size: cover;
+  background-position: center;
+  text-align: justify;
+  padding: 4rem 1em;
+  color: white;
+
+}
 
 /* Footer */
 .mainFooter{
