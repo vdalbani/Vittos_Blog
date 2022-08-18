@@ -33,9 +33,10 @@ export class HomeComponent extends Component {
         <Col lg="8">
           <h2 className="h3">Portfolio</h2>
           <p className="info-text">
-            <strong>Vitto's Blog </strong> has been created to showcase a portfolio that includes projects using different programming languages. 
-            These projects have been written using different programming languages, frameworks, environments, and tools such as C#, JavaScript,
-             Java, PHP and more.
+              <strong>Vitto's Blog </strong> has been created to showcase a portfolio that includes different personal projects.
+               These projects have been written using a variety of programming languages, frameworks, environments, and tools 
+               such as C#, JavaScript, Java, PHP and more. Each project demonstrate functionality using advanced principles and 
+               techniques according to the programming language and framework.
             <br/> 
           </p>
         </Col>
@@ -43,6 +44,10 @@ export class HomeComponent extends Component {
     </Container>
   </section>
   <section className="section">
+    <br/>
+    <Row className="g-4">
+      <h3>Latest Projects</h3>
+    </Row>
     <br/>
     <Row xs={1} md={3} className="g-4">
       {projects.slice(0,3).map((project)=>{

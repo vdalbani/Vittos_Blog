@@ -11,6 +11,7 @@ import CardImg from 'react-bootstrap/CardImg'
 
 
 const SingleProjectComponent = () =>{
+
     // console.log(useParams());
 
     const {projectId} = useParams();
@@ -49,7 +50,7 @@ const SingleProjectComponent = () =>{
             <Card>
                 <Row style={{alignItems:'center'}}>
                     <Col md='5'>
-                        <CardImg src={guides.guide1.img} alt="..."></CardImg>
+                        <CardImg src={guides.guide1.img} alt="Loading..."></CardImg>
                     </Col>
                     <Col md='7'>
                         <Card.Body>
