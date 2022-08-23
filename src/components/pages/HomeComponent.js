@@ -80,9 +80,6 @@ export class HomeComponent extends Component {
             <br/> 
           </p>
         </Col>
-        {/* <Col md='4'>
-          <Card.Img className="logoInfo" src={vLogo}></Card.Img>
-        </Col> */}
       </Row>
     </Container>
   </section>

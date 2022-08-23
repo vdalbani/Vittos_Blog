@@ -1,4 +1,5 @@
-//Please upload your images to postimage.com the use the urls to display 320x320 or lower
+//Images
+//Aspect ratio: 7:5
 const projects = [
     {
         id:"1",

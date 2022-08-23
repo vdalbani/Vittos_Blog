@@ -21,7 +21,7 @@ const SingleProjectComponent = () =>{
     return(
     <>
     <section className="sectionSingleComponent" style={{  padding: '1em', margin:'0', background:'#301934', color:'white',}}>
-        {/* NEW BANNER */}
+        {/* BANNER */}
             <Row className='g-4' style={{alignItems:'center'}}>
                 <Col md='5'>
                     <CardImg src={img}></CardImg>
@@ -42,10 +42,10 @@ const SingleProjectComponent = () =>{
                 </Col>
             </Row>
 
-        {/* NEW BANNER ENDS */}   
+        {/* BANNER ENDS */}   
     </section>
     <section className="cardsSection">
-        {/* NEW CARD */}
+        {/* CARD */}
         <Container style={{padding:'0'}}>
             <Card>
                 <Row style={{alignItems:'center'}}>
@@ -93,7 +93,7 @@ const SingleProjectComponent = () =>{
                 </Row>
             </Card>
         </Container>
-        {/* NEW CARD ENDS */}
+        {/*CARD ENDS */}
     </section>           
     </>
     )
